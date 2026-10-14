@@ -1,0 +1,5 @@
+opencv-python>=4.8
+mediapipe>=0.10.9
+numpy>=1.24
+evdev>=1.6
+screeninfo>=0.8   # optional: multi-monitor / correct screen size detection

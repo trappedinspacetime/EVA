@@ -1,0 +1,15 @@
+{
+  "sens_x": 2.0,
+  "sens_y": 2.0,
+  "min_cutoff": 1.2,
+  "beta": 0.08,
+  "smile_lock_enabled": true,
+  "lock_hold_s": 0.5,
+  "scroll_enabled": true,
+  "dwell_enabled": true,
+  "edge_nudge": true,
+  "edge_nudge_px": 3,
+  "gestures": {
+    "mouth": { "on": 0.04, "off": 0.025 }
+  }
+}
