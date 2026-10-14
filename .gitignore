@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+# per-user files created at runtime
+eva_profile.json
+eva_config.json
+# downloaded model
+face_landmarker.task
+*.part
