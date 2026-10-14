@@ -163,10 +163,21 @@ Individual gesture thresholds can be overridden too, for example:
 - [eViacam](https://eviacam.crea-si.com/) – the classic head-tracking mouse.
 - Casiez, Roussel, Vogel: *1€ Filter: A Simple Speed-based Low-pass Filter for Noisy Input in Interactive Systems* (CHI 2012).
 
+## AI assistance
+
+This project was built by its author together with [Claude](https://www.anthropic.com/claude), an AI assistant made by Anthropic. The idea, the original script, the choice of gestures, all testing on real hardware and every decision about what to change came from the author. Claude's contributions:
+
+- **Analysis** – reviewed the original script and diagnosed the causes of the jitter and the heavy, laggy feel (very high gain from absolute mapping, several stacked filters, a slow processing loop, and cursor drift with a relative virtual mouse).
+- **Redesign and implementation** – relative head control with an acceleration curve, multi-point Lucas-Kanade tracking, a single dt-based One Euro filter, an absolute `uinput` pointer with a high-rate interpolating output thread, and a separate low-latency camera thread.
+- **Interaction design** – gesture state machines (hysteresis, hold times, freeze-while-forming), the per-user calibration wizard, mouth tap / double-tap / drag detection, the smile lock switch, eyebrow scrolling, the edge nudge for auto-hide docks, and the safety releases.
+- **Testing and fixes** – wrote automated checks that run the control logic on synthetic camera and gesture data, and fixed bugs found along the way (for example a startup race in the camera thread).
+- **Documentation** – the English translation of the script and this README.
+
+Claude had no access to a real camera or to the author's desktop, so all real-world behavior and tuning were verified by the author. As with any AI-assisted code, please read it and test it carefully before relying on it.
+
 ## License
 
-No license has been chosen yet. Add a `LICENSE` file before sharing (MIT or Apache-2.0 are common choices for projects like this).
-
+MIT Licensee
 ## Contributing
 
 Issues and pull requests are welcome, especially for other desktop environments, cameras and accessibility needs. If you change a default, please describe the problem it solves.
