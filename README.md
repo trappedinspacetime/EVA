@@ -44,8 +44,8 @@ Keyboard shortcuts (the preview window must be focused): `q` quit · `r` re-cent
 ## Installation
 
 ```bash
-git clone https://github.com/<your-user>/<your-repo>.git
-cd <your-repo>
+git clone https://github.com/trappedinspacetime/EVA.git
+cd EVA
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
@@ -177,7 +177,8 @@ Claude had no access to a real camera or to the author's desktop, so all real-wo
 
 ## License
 
-MIT Licensee
+Released under the [MIT License](LICENSE).
+
 ## Contributing
 
 Issues and pull requests are welcome, especially for other desktop environments, cameras and accessibility needs. If you change a default, please describe the problem it solves.
